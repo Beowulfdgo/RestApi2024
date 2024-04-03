@@ -1,0 +1,10 @@
+npm run  start
+
+http://localhost:3000/api/getall
+
+Mongo global Mio
+mongodb+srv://antonioflores30:MUWFnfnaNO7vwMLv@cluster2024.fd8rx0o.mongodb.net/testDatabase
+
+Mongo global ejemplo
+DATABASE_URL = `mongodb+srv://nishant:nishant666@cluster0.xduyh.mongodb.net/?retryWrites=true&w=majority/testDatabase`
+

@@ -6,7 +6,13 @@ const router = express.Router();
 router.post('/post', async (req, res) => {
     const data = new Model({
         name: req.body.name,
-        age: req.body.age
+        age: req.body.age,
+        nc :req.body.nc,
+        hacks :req.body.hacks,
+        status:req.body.status,
+        pasword:req.body.pasword,
+        inicio:req.body.inicio,
+        fin:req.body.fin
     })
 
     try {
@@ -22,6 +28,18 @@ router.post('/post', async (req, res) => {
 router.get('/getAll', async (req, res) => {
     try {
         const data = await Model.find();
+        res.json(data)
+    }
+    catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+})
+
+//Get all Method
+router.get('/getStatus', async (req, res) => {
+    try {
+        const data = await Model.find();
+        //res.json(data[0].status)
         res.json(data)
     }
     catch (error) {
